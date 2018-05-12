@@ -19,4 +19,14 @@ class Pet extends Model
         'age' => 'integer',
         'is_vaccinated' => 'boolean'
     ];
+
+    public function owner()
+    {
+        return $this->belongsTo(Owner::class);
+    }
+
+    public function vet()
+    {
+        return $this->belongsTo(Vet::class);
+    }
 }

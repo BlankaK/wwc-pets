@@ -38,13 +38,24 @@ Route::middleware('auth')->group(function () {
     Route::get('vets/{vet}', 'VetController@show')->name('vets.show');
     Route::get('vets/{vet}/edit', 'VetController@edit')->name('vets.edit');
 
+    Route::get('pets', 'PetController@index')->name('pets.index');
+    Route::post('pets', 'PetController@store')->name('pets.store');
+    Route::get('pets/create', 'PetController@create')->name('pets.create');
+    Route::delete('pets/{pet}', 'PetController@destroy')->name('pets.destroy');
+    Route::put('pets/{pet}', 'PetController@update')->name('pets.update');
+    Route::get('pets/{pet}', 'PetController@show')->name('pets.show');
+    Route::get('pets/{pet}/edit', 'PetController@edit')->name('pets.edit');
+
     // Option 2 - define routes for each resource individually
     //Route::resource('owners', 'OwnerController');
     //Route::resource('vets', 'VetController');
+    //Route::resource('pets', 'PetController');
 
     // Option 3 - define routes for multiple resources together
 //    Route::resources([
 //        'owners' => 'OwnerController',
 //        'vets' => 'VetController',
+//        'pets' => 'PetController',
 //    ]);
 });
+

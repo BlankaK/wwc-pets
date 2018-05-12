@@ -9,6 +9,5 @@
 /.idea
 /.vscode
 npm-debug.log
-.env
 package-lock.json
 .DS_Store
